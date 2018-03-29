@@ -1,0 +1,80 @@
+.label {
+    text-decoration: none;
+	background: #005408;
+	border-radius: 2px;
+	color: #FFF;
+	display: inline;
+	font-size: 1em;
+	padding: 1px 4px;
+	vertical-align: baseline;
+}
+
+.label-none {
+    text-decoration: none;
+	border-radius: 2px;
+	color: #FFF;
+	display: inline;
+	font-size: 1em;
+	padding: 1px 4px;
+	vertical-align: baseline;
+}
+
+
+
+.p17, .p18, .p19, .p20 {
+	background: #135d13;
+	color: #FFF;
+}
+
+.p14, .p15, .p16 {
+	background: #359452;
+	color: #FFF;
+}	
+
+.p10, .p11, .p12, .p13 {
+	background: #1b72c2;
+	color: #FFF;
+}	
+
+.p5, .p6, .p7, .p8, .p9 {
+	background: #a16020;
+	color: #FFF;
+	padding: 1px 8px;
+}	
+
+.p1, .p2, .p3, .p4 {
+	background: #951010;
+	color: #FFF;
+	padding: 1px 8px;
+}
+
+
+
+
+.media {
+		background-color: #404146;
+}
+
+.player {
+	text-align: center;
+	background-color: #f2f2f2;
+}
+
+.player-info {
+	background-color: #f2f2f2;
+	padding: 10px 0 0 0;
+}
+
+.flag {
+	vertical-align: top;	
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+.player-info {
+	text-align: center;
+}
+
+}
