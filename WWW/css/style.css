@@ -58,11 +58,12 @@
 .player {
 	text-align: center;
 	background-color: #f2f2f2;
+	padding-top: 20px;
 }
 
 .player-info {
 	background-color: #f2f2f2;
-	padding: 10px 0 0 0;
+	padding: 25px 0 0 0;
 }
 
 .flag {
