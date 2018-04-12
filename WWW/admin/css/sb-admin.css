@@ -1,3 +1,146 @@
+/* Tooltip container */
+.tooltipP {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltipP .tooltiptextP {
+  visibility: hidden;
+  width: 150px;
+  max-width: 150px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltipIMG {
+  max-height: 102px;
+}
+
+/* Tooltip arrow */
+.tooltipP .tooltiptextP::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltipP:hover .tooltiptextP {
+  visibility: visible;
+  opacity: 1;
+}
+
+.playerPic {
+  max-height: 105px;
+}
+
+.playerPicSmall {
+  max-height: 30px;
+}
+
+.teamPic {
+  max-height: 35px;
+}
+
+
+.datainfo {
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0px 0px 0px 0px;
+  color: #333333;
+}
+
+.datainfo span {
+  font-size: 25px;
+  line-height: 30px;
+  display: block;
+  color: #333333;
+}
+
+
+/* STYLE.CSS */
+.label {
+  text-decoration: none;
+  background: #005408;
+  border-radius: 2px;
+  color: #FFF;
+  display: inline;
+  font-size: 1em;
+  padding: 1px 4px;
+  vertical-align: baseline;
+}
+
+.label-none {
+  text-decoration: none;
+  border-radius: 2px;
+  color: #FFF;
+  display: inline;
+  font-size: 1em;
+  padding: 1px 4px;
+  vertical-align: baseline;
+}
+
+
+
+
+
+.media {
+  background-color: #404146;
+}
+
+.player {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.player-info {
+  padding: 25px 0 0 0;
+  font-size: 20px;
+}
+
+.flag {
+  vertical-align: top;
+}
+
+
+
+.card-background {
+  background-image: url("../../img/net-background.jpg");
+  
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+  .player-info {
+    text-align: center;
+  }
+
+}/*STYLE CSS KONIEC */
+
+
+
+
 html {
   position: relative;
   min-height: 100%;
