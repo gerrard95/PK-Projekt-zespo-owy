@@ -1,5 +1,85 @@
+/* Tooltip container */
+.tooltipP {
+	position: relative;
+	display: inline-block;
+}
+
+/* Tooltip text */
+.tooltipP .tooltiptextP {
+	visibility: hidden;
+	width: 150px;
+	max-width: 150px;
+	background-color: #555;
+	color: #fff;
+	text-align: center;
+	padding: 5px 0;
+	border-radius: 6px;
+
+	/* Position the tooltip text */
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 50%;
+	margin-left: -60px;
+
+	/* Fade in tooltip */
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.tooltipIMG {
+	max-height: 102px;
+}
+
+/* Tooltip arrow */
+.tooltipP .tooltiptextP::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltipP:hover .tooltiptextP {
+	visibility: visible;
+	opacity: 1;
+}
+
+.playerPic {
+	max-height: 105px;
+}
+
+.playerPicSmall {
+	max-height: 30px;
+}
+
+.teamPic {
+	max-height: 35px;
+}
+
+
+.datainfo {
+	font-size: 14px;
+	line-height: 20px;
+	padding: 0px 0px 0px 0px;
+	color: #333333;
+}
+
+.datainfo span {
+	font-size: 25px;
+	line-height: 30px;
+	display: block;
+	color: #333333;
+}
+
+
+/* STYLE.CSS */
 .label {
-    text-decoration: none;
+	text-decoration: none;
 	background: #005408;
 	border-radius: 2px;
 	color: #FFF;
@@ -10,7 +90,7 @@
 }
 
 .label-none {
-    text-decoration: none;
+	text-decoration: none;
 	border-radius: 2px;
 	color: #FFF;
 	display: inline;
@@ -19,8 +99,6 @@
 	vertical-align: baseline;
 }
 
-<<<<<<< HEAD
-=======
 
 
 .p17, .p18, .p19, .p20 {
@@ -31,18 +109,18 @@
 .p14, .p15, .p16 {
 	background: #359452;
 	color: #FFF;
-}	
+}
 
 .p10, .p11, .p12, .p13 {
 	background: #1b72c2;
 	color: #FFF;
-}	
+}
 
 .p5, .p6, .p7, .p8, .p9 {
 	background: #a16020;
 	color: #FFF;
 	padding: 1px 8px;
-}	
+}
 
 .p1, .p2, .p3, .p4 {
 	background: #951010;
@@ -54,25 +132,59 @@
 
 
 .media {
-		background-color: #404146;
+	background-color: #404146;
 }
 
 .player {
 	text-align: center;
-	background-color: #f2f2f2;
 	padding-top: 20px;
 }
 
 .player-info {
-	background-color: #f2f2f2;
 	padding: 25px 0 0 0;
+	font-size: 20px;
 }
 
 .flag {
-	vertical-align: top;	
+	vertical-align: top;
 }
 
 
+.table-profile-player td {
+    padding: 0.1rem !important;
+    vertical-align: middle !important;
+}
+
+
+
+.card-background {
+	background-image: url("../img/net-background.jpg");
+}
+
+main {
+	background-image: url("../img/background.jpg");
+}
+
+/*STYLE CSS KONIEC */
+
+
+.searchForma {
+	display: none;
+}
+
+
+.navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show > .nav-link {
+	color: #fff;
+	border-bottom: 1px solid white;
+}
+
+
+
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1600px !important;
+	}
+}
 
 @media screen and (max-width: 768px) {
 
@@ -81,4 +193,11 @@
 }
 
 }
->>>>>>> 18ad525e03d82366a2516a14f26994375d0c422b
+
+
+
+@media (min-width: 992px) {
+    .btn-search {
+        display: none;
+    }
+}
