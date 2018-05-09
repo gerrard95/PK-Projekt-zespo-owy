@@ -3,6 +3,20 @@ require('db.php');
 ?>
 
 <?php
+if(isset($_POST['delete'])) {
+    $id = $_GET['id'];
+
+    $sql = "DELETE FROM bs_siatkarze WHERE ID_siatkarza = $id";
+
+    if (mysqli_query($conn, $sql)) {
+        header("Location: index.php?go=players&delete=successfully");
+    } else {
+        echo "Error deleting record: " . mysqli_error($conn);
+    }
+}
+?>
+
+<?php
     $id = $_GET['id'];
 
     $sel_query = "Select * from bs_siatkarze, bs_zespoly, bs_kraje, bs_pozycje WHERE ID_zespolu = ID_zespol AND Narodowosc = ID_kraj AND Pozycja = poz_skrot AND ID_siatkarza = '$id';";
@@ -49,8 +63,38 @@ require('db.php');
     <li class="breadcrumb-item active"><?php echo $imie; ?> <?php echo $nazwisko; ?></li>
 </ol>
 
-<a class="btn btn-primary" href="#">Edytuj</a>
-<a class="btn btn-primary" href="#">Usuń</a></p>
+<a class="btn btn-primary" href="index.php?go=player-edit&id=<?=$id; ?>">Edytuj</a>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
+    Usuń
+</button></p>
+
+
+<!-- Modal Usuń -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Potwierdź usunięcie</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Czy chcesz usunąć z siatkarza <?php echo $imie; ?> <?php echo $nazwisko; ?>?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Anuluj</button>
+                <form action="" method="POST" ENCTYPE="multipart/form-data" >
+                    <button type="submit" class="btn btn-primary" name="delete">Usuń</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 
 <!-- Example DataTables Card-->
 <div class="card mb-3">
