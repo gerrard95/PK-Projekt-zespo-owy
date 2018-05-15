@@ -1,0 +1,340 @@
+/* Tooltip container */
+.tooltipP {
+	position: relative;
+	display: inline-block;
+}
+
+/* Tooltip text */
+.tooltipP .tooltiptextP {
+	visibility: hidden;
+	width: 150px;
+	max-width: 150px;
+	background-color: #555;
+	color: #fff;
+	text-align: center;
+	padding: 5px 0;
+	border-radius: 6px;
+
+	/* Position the tooltip text */
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 50%;
+	margin-left: -60px;
+
+	/* Fade in tooltip */
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.tooltipIMG {
+	max-height: 102px;
+}
+
+/* Tooltip arrow */
+.tooltipP .tooltiptextP::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltipP:hover .tooltiptextP {
+	visibility: visible;
+	opacity: 1;
+}
+
+
+
+
+
+
+
+.bg-siatkarze {
+	background-image: url("../img/siatkarze.jpg");
+	background-size: auto;
+
+	height: 275px;
+}
+
+.img-responsive {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+
+
+
+
+/* Zoom In #1 */
+.bg-image img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.bg-image:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+
+
+
+.column::after {
+	content: '';
+	clear: both;
+	display: block;
+}
+.column div {
+	position: relative;
+	float: left;
+	padding: 0;
+}
+.column div:first-child {
+	margin-left: 0;
+}
+.column div span {
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	z-index: -1;
+	display: block;
+	width: 300px;
+	margin: 0;
+	padding: 0;
+	color: #444;
+	font-size: 18px;
+	text-decoration: none;
+	text-align: center;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	opacity: 0;
+}
+figure {
+
+	margin: 0;
+	padding: 0;
+	background: #fff;
+	overflow: hidden;
+}
+figure:hover+span {
+	bottom: -36px;
+	opacity: 1;
+}
+
+
+
+/* Zoom In #1 */
+.hover01 figure img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover01 figure:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.playerPic {
+	max-height: 105px;
+}
+
+.playerPicSmall {
+	max-height: 30px;
+}
+
+.teamPic {
+	max-height: 35px;
+}
+
+
+.datainfo {
+	font-size: 14px;
+	line-height: 20px;
+	padding: 0px 0px 0px 0px;
+	color: #333333;
+}
+
+.datainfo span {
+	font-size: 25px;
+	line-height: 30px;
+	display: block;
+	color: #333333;
+}
+
+
+/* STYLE.CSS */
+.label {
+	text-decoration: none;
+	background: #005408;
+	border-radius: 2px;
+	color: #FFF;
+	display: inline;
+	font-size: 1em;
+	padding: 1px 4px;
+	vertical-align: baseline;
+}
+
+.label-none {
+	text-decoration: none;
+	border-radius: 2px;
+	color: #FFF;
+	display: inline;
+	font-size: 1em;
+	padding: 1px 4px;
+	vertical-align: baseline;
+}
+
+
+
+.p17, .p18, .p19, .p20 {
+	background: #135d13;
+	color: #FFF;
+}
+
+.p14, .p15, .p16 {
+	background: #359452;
+	color: #FFF;
+}
+
+.p10, .p11, .p12, .p13 {
+	background: #1b72c2;
+	color: #FFF;
+}
+
+.p5, .p6, .p7, .p8, .p9 {
+	background: #a16020;
+	color: #FFF;
+	padding: 1px 8px;
+}
+
+.p1, .p2, .p3, .p4 {
+	background: #951010;
+	color: #FFF;
+	padding: 1px 8px;
+}
+
+
+
+
+.media {
+	background-color: #404146;
+}
+
+.player {
+	text-align: center;
+	padding-top: 20px;
+}
+
+.player-info {
+	padding: 25px 0 0 0;
+	font-size: 20px;
+}
+
+.flag {
+	vertical-align: top;
+}
+
+
+.table-profile-player td {
+    padding: 0.1rem !important;
+    vertical-align: middle !important;
+}
+
+
+
+.card-background {
+	background-image: url("../img/net-background.jpg");
+}
+
+main {
+	background-image: url("../img/background.jpg");
+}
+
+/*STYLE CSS KONIEC */
+
+
+
+/*Formularze*/
+
+.form-group {
+	margin-bottom: 0.1rem !important;
+}
+
+label {
+	margin-bottom: 0.1rem !important;
+}
+
+/*Formularze*/
+
+.navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show > .nav-link {
+	color: #fff;
+	border-bottom: 1px solid white;
+}
+
+
+
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1460px !important;
+	}
+}
+
+
+
+	.container {
+		max-width: 1460px !important;
+	}
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+.player-info {
+	text-align: center;
+}
+
+}
+
+
+@media (min-width: 992px) {
+    .btn-search {
+        display: none;
+    }
+
+	.collapse {
+		display: block !important;
+	}
+
+
+}
