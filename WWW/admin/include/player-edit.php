@@ -2,6 +2,44 @@
 require('db.php');
 ?>
 
+
+<?php
+$id = $_GET['id'];
+
+$sel_query = "Select * from bs_siatkarze, bs_zespoly, bs_kraje, bs_pozycje WHERE ID_zespolu = ID_zespol AND Narodowosc = ID_kraj AND Pozycja = poz_skrot AND ID_siatkarza = '$id';";
+$result = mysqli_query($conn,$sel_query);
+
+while($row = mysqli_fetch_assoc($result)) {
+    $id = $row["ID_siatkarza"];
+    $imie = $row["Imie"];
+    $nazwisko = $row["Nazwisko"];
+    $file_name = $id . " " . $imie . " ". $nazwisko . "";
+
+    $wzrost = $row["Wzrost"];
+    $atak = $row["Zasieg_ataku"];
+    $blok = $row["Zasieg_bloku"];
+
+    $narodowosc = $row["Narodowosc"];
+
+    $data = $row["Data_urodzenia"];
+
+    $data = $row["Data_urodzenia"];
+
+    $pozycja = $row["poz_nazwa"];
+    $poz = $row["Pozycja"];
+
+    $zespol = $row["zes_nazwa"];
+    $id_zespol = $row["ID_zespol"];
+    $nr = $row["Nr_koszulki"];
+    $kontrakt = $row["Dlugosc_kontraktu"];
+
+    $file_name_team = $zespol;
+}
+
+
+?>
+
+
 <?php
 
 
@@ -35,6 +73,19 @@ if(isset($_POST['insert'])) {
     $update_query = "UPDATE bs_siatkarze SET `Imie` = '$imie', `Nazwisko` = '$nazwisko', `Data_urodzenia` = '$data', `Narodowosc` = '$narodowosc', `Pozycja` = '$pozycja', `Wzrost` = '$wzrost', `Zasieg_ataku`= '$atak', `Zasieg_bloku` = '$blok', `ID_zespolu` = '$zespol', `Nr_koszulki` = '$numer', `Dlugosc_kontraktu` = '$kontrakt' WHERE `ID_siatkarza` = '$id'";
 
     if (mysqli_query($conn, $update_query)) {
+
+        $insert_query_historia = "Insert INTO bs_siatkarze_historia (`sh_id`, `sh_siatkarz`, `sh_operacja`, `sh_data`) VALUES ('', '$id', 'E', now())";
+        mysqli_query($conn, $insert_query_historia);
+
+
+        if($id_zespol != $zespol) {
+            $insert_query_transfery = "Insert INTO bs_transfery (`tra_id`, `tra_siatkarz`, `tra_poprzedni_zes`, `tra_nowy_zes`, `tra_data`) VALUES ('', '$id', '$id_zespol', '$zespol' , now())";
+            mysqli_query($conn, $insert_query_transfery);
+
+
+        }
+
+
         echo '<div class="alert alert-success" role="alert">
   Siatkarz został edytowany... <a href="index.php?go=player&id='.$id.'">(Zobacz profil)</a>
 </div>';
@@ -107,41 +158,7 @@ if(strpos($fullUrl, "form=empty") == true) {
 
 
 
-<?php
-$id = $_GET['id'];
 
-$sel_query = "Select * from bs_siatkarze, bs_zespoly, bs_kraje, bs_pozycje WHERE ID_zespolu = ID_zespol AND Narodowosc = ID_kraj AND Pozycja = poz_skrot AND ID_siatkarza = '$id';";
-$result = mysqli_query($conn,$sel_query);
-
-while($row = mysqli_fetch_assoc($result)) {
-    $id = $row["ID_siatkarza"];
-    $imie = $row["Imie"];
-    $nazwisko = $row["Nazwisko"];
-    $file_name = $id . " " . $imie . " ". $nazwisko . "";
-
-    $wzrost = $row["Wzrost"];
-    $atak = $row["Zasieg_ataku"];
-    $blok = $row["Zasieg_bloku"];
-
-    $narodowosc = $row["Narodowosc"];
-
-    $data = $row["Data_urodzenia"];
-
-    $data = $row["Data_urodzenia"];
-
-    $pozycja = $row["poz_nazwa"];
-    $poz = $row["Pozycja"];
-
-    $zespol = $row["zes_nazwa"];
-    $id_zespol = $row["ID_zespol"];
-    $nr = $row["Nr_koszulki"];
-    $kontrakt = $row["Dlugosc_kontraktu"];
-
-    $file_name_team = $zespol;
-}
-
-
-?>
 
 <!-- Example DataTables Card-->
 <div class="card mb-3">

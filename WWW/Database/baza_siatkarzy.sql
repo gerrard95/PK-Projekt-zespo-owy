@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 11 Kwi 2018, 20:37
+-- Czas generowania: 15 Maj 2018, 20:43
 -- Wersja serwera: 10.1.30-MariaDB
 -- Wersja PHP: 7.2.2
 
@@ -39,7 +39,6 @@ CREATE TABLE `bs_kraje` (
 --
 
 INSERT INTO `bs_kraje` (`ID_kraj`, `kr_skrot`, `kr_nazwa`) VALUES
-(0, 'EUR', '-'),
 (1, 'AFG', 'Afganistan'),
 (2, 'ALB', 'Albania'),
 (3, 'ALG', 'Algieria'),
@@ -178,23 +177,6 @@ CREATE TABLE `bs_rozgrywki` (
 --
 
 INSERT INTO `bs_rozgrywki` (`ID_rozgrywek`, `roz_nazwa`, `roz_kraj`) VALUES
-(1, 'European Championship', 0),
-(2, 'World Championship', 0),
-(3, 'South American Championship', 0),
-(4, 'NORCECA Championship', 0),
-(5, 'African Nations Championship', 0),
-(6, 'World Cup', 0),
-(7, 'Olympic Games', 0),
-(8, 'World League', 0),
-(9, 'European League', 0),
-(10, 'Champions League', -1),
-(11, 'CEV Cup', -1),
-(12, 'Challenge Cup', -1),
-(13, 'Club World Championship', -1),
-(14, 'Pan-American Cup', 0),
-(15, 'World Grand Champions Cup', 0),
-(16, 'Junior World Championship', -2),
-(17, 'Junior European Championship', -2),
 (18, 'Crna Gora - Odbojkaška Liga', 18),
 (19, 'Česko - Kooperativa Extraliga', 19),
 (20, 'Danmark - Elite Volley Ligaen', 20),
@@ -346,19 +328,18 @@ INSERT INTO `bs_siatkarze` (`ID_siatkarza`, `Imie`, `Nazwisko`, `Data_urodzenia`
 (129, 'Patryk', 'Czarnowski', '1985-11-01', 66, 'S', 202, 358, 326, 269, 9, 2),
 (131, 'Michał', 'Ruciak', '1983-08-22', 66, 'P', 191, 341, 315, 294, 11, 1),
 (135, 'Marcin', 'Możdżonek', '1985-02-09', 66, 'S', 211, 358, 338, 275, 17, 2),
-(137, 'Bartosz', 'Gawryszewski', '1985-08-22', 66, 'S', 202, 346, 323, 294, 17, 1),
+(137, 'Bartosz', 'Gawryszewski', '1985-08-22', 66, 'S', 202, 346, 323, 270, 17, 1),
 (140, 'Wojciech', 'Jurkiewicz', '1977-06-21', 66, 'S', 205, 350, 330, 277, 4, 1),
 (143, 'Paweł', 'Woicki', '1983-06-29', 66, 'R', 182, 325, 305, 271, 12, 2),
 (150, 'Mariusz', 'Wlazły', '1983-08-04', 66, 'A', 197, 362, 343, 269, 2, 2),
 (161, 'Robert', 'Szczerbaniuk', '1977-05-29', 66, 'S', 199, 350, 329, 556, 14, 1),
 (163, 'Łukasz', 'Żygadło', '1979-08-02', 66, 'R', 201, 345, 325, 708, 15, 1),
 (174, 'Zbigniew', 'Bartman', '1987-05-04', 66, 'P', 198, 358, 324, 432, 9, 1),
-(179, 'Facundo', 'Conte', '1989-08-25', 5, 'P', 198, 360, 335, 846, 7, 1),
+(179, 'Facundo', 'Conte', '1989-08-25', 5, 'P', 198, 360, 335, 448, 7, 1),
 (195, 'Bartosz', 'Kurek', '1988-08-29', 66, 'P', 205, 372, 340, 392, 13, 1),
 (256, 'Dawid', 'Konarski', '1989-08-31', 66, 'A', 198, 350, 335, 392, 6, 1),
 (301, 'Wallace Leandro', 'de Souza', '1987-06-26', 14, 'A', 198, 365, 348, 448, 4, 1),
 (482, 'Murilo', 'Radke', '1989-01-31', 14, 'R', 198, 343, 310, 761, 7, 1),
-(537, 'Adel', 'Gholami', '1986-02-09', 38, 'S', 195, 341, 330, 708, 9, 1),
 (585, 'Oleg', 'Antonov', '1988-07-28', 89, 'P', 198, 0, 0, 419, 7, 1),
 (623, 'Rafał', 'Buszek', '1987-04-28', 66, 'P', 196, 345, 327, 276, 7, 1),
 (639, 'Martin', 'Nemec', '1984-07-31', 73, 'A', 198, 350, 330, 509, 12, 1),
@@ -424,7 +405,7 @@ INSERT INTO `bs_siatkarze` (`ID_siatkarza`, `Imie`, `Nazwisko`, `Data_urodzenia`
 (1193, 'Antti', 'Siltala', '1984-03-14', 28, 'P', 195, 345, 315, 395, 4, 1),
 (1195, 'Mikko', 'Oivanen', '1986-05-26', 28, 'A', 198, 361, 337, 212, 4, 1),
 (1216, 'Keith', 'Pupart', '1985-03-19', 26, 'P', 195, 350, 325, 497, 3, 2),
-(1232, 'Aleh', 'Akhrem', '1983-03-12', 11, 'P', 195, 349, 335, 387, 7, 1),
+(1232, 'Aleh', 'Akhrem', '1983-03-12', 11, 'L', 195, 349, 335, 275, 7, 1),
 (1266, 'Arslan', 'Eksi', '1985-07-17', 83, 'R', 198, 335, 322, 350, 10, 1),
 (1298, 'Saeid', 'Marouflakrani', '1985-10-20', 38, 'R', 189, 331, 311, 683, 5, 1),
 (1305, 'Mehdi', 'Mahdavi', '1984-02-12', 38, 'R', 192, 330, 315, 708, 13, 1),
@@ -473,7 +454,6 @@ INSERT INTO `bs_siatkarze` (`ID_siatkarza`, `Imie`, `Nazwisko`, `Data_urodzenia`
 (1586, 'Andrea', 'Semenzato', '1981-09-12', 89, 'S', 208, 340, 325, 0, 0, 0),
 (1587, 'Kévin', 'Tillie', '1990-11-02', 29, 'P', 198, 345, 325, 847, 7, 1),
 (1591, 'Alessandro', 'Fei', '1978-11-29', 89, 'A', 204, 352, 321, 414, 14, 1),
-(1594, 'Alberto', 'Cisolla', '1977-10-10', 89, 'P', 197, 367, 345, 752, 15, 1),
 (1595, 'Matteo', 'Martino', '1987-01-28', 89, 'P', 197, 350, 335, 0, 0, 0),
 (1599, 'Cristian', 'Savani', '1982-02-22', 89, 'P', 195, 360, 340, 421, 11, 1),
 (1604, 'Stefano', 'Moro', '1982-01-02', 89, 'A', 200, 350, 338, 742, 3, 1),
@@ -483,9 +463,8 @@ INSERT INTO `bs_siatkarze` (`ID_siatkarza`, `Imie`, `Nazwisko`, `Data_urodzenia`
 (1645, 'Metodi', 'Ananiev', '1986-02-17', 15, 'P', 202, 348, 333, 277, 1, 1),
 (1679, 'Yu', 'Koshikawa', '1984-06-30', 41, 'P', 190, 345, 325, 453, 7, 1),
 (1680, 'Tatsuya', 'Fukuzawa', '1986-07-01', 41, 'P', 189, 355, 330, 454, 15, 1),
-(1696, 'Alessandro', 'Paparoni', '1981-08-17', 89, 'L', 191, 335, 322, 0, 0, 0),
+(1696, 'Alessandro', 'Paparoni', '1981-08-17', 89, 'L', 193, 335, 322, 0, 0, 0),
 (1702, 'Cristian', 'Casoli', '1975-01-27', 89, 'P', 192, 338, 325, 0, 0, 0),
-(1733, 'Guillaume', 'Samica', '1981-09-28', 29, 'P', 197, 355, 318, 273, 9, 1),
 (1734, 'Mateo', 'Piano', '1990-10-24', 89, 'S', 207, 352, 325, 489, 11, 2),
 (1735, 'Roberto', 'Cazzaniga', '1979-10-28', 89, 'A', 198, 0, 0, 483, 1, 1),
 (1742, 'Dragan', 'Travica', '1986-08-28', 89, 'R', 200, 325, 310, 420, 13, 1),
@@ -560,7 +539,6 @@ INSERT INTO `bs_siatkarze` (`ID_siatkarza`, `Imie`, `Nazwisko`, `Data_urodzenia`
 (3119, 'Łukasz', 'Kaczmarek', '1994-06-29', 66, 'A', 204, 354, 332, 497, 2, 1),
 (3120, 'Mateusz', 'Bieniek', '1994-04-05', 66, 'S', 210, 351, 329, 276, 10, 2),
 (3125, 'Éder Francis', 'Carbonera', '1983-08-19', 14, 'S', 205, 350, 330, 415, 16, 1),
-(3128, 'Bruno Augusto', 'Zanuto', '1983-03-03', 14, 'P', 199, 343, 322, 865, 7, 1),
 (3130, 'Raphael Thiago', 'de Oliveira', '1984-03-08', 14, 'P', 199, 338, 320, 761, 16, 1),
 (3143, 'Javier Ernesto', 'Jimenez Scull', '1989-11-16', 50, 'P', 198, 352, 345, 0, 0, 0),
 (3144, 'Michael', 'Olieman', '1983-04-27', 34, 'A', 202, 350, 338, 0, 0, 0),
@@ -599,7 +577,6 @@ INSERT INTO `bs_siatkarze` (`ID_siatkarza`, `Imie`, `Nazwisko`, `Data_urodzenia`
 (4035, 'Wojciech', 'Włodarczyk', '1990-10-28', 66, 'P', 200, 360, 330, 273, 10, 2),
 (4053, 'Ardo', 'Kreek', '1986-08-17', 26, 'S', 202, 352, 335, 197, 18, 2),
 (4073, 'Nikolay', 'Nikolov', '1986-07-29', 15, 'S', 206, 350, 332, 342, 7, 1),
-(4086, 'Alberto', 'Mendes', '1981-06-06', 14, 'S', 199, 341, 319, 0, 0, 0),
 (4099, 'Riad', 'Pires', '1981-10-02', 14, 'S', 204, 0, 0, 759, 15, 1),
 (4110, 'Matthew', 'Anderson', '1987-04-18', 75, 'P', 208, 360, 332, 347, 1, 2),
 (4114, 'Renato', 'dos Santos', '1983-05-01', 14, 'P', 196, 331, 307, 439, 9, 1),
@@ -702,7 +679,7 @@ INSERT INTO `bs_siatkarze` (`ID_siatkarza`, `Imie`, `Nazwisko`, `Data_urodzenia`
 (8308, 'Yuriy', 'Gladyr', '1984-07-08', 84, 'S', 203, 360, 330, 381, 8, 1),
 (8309, 'Sergey', 'Antipkin', '1986-03-28', 70, 'R', 195, 331, 319, 341, 1, 1),
 (8408, 'Jenia', 'Grebennikov', '1990-08-13', 29, 'L', 188, 0, 0, 410, 10, 3),
-(8731, 'Adrian', 'Buchowski', '1991-09-30', 66, 'P', 196, 345, 315, 271, 13, 2),
+(8731, 'Adrian', 'Buchowski', '1991-09-30', 66, 'P', 196, 345, 315, 213, 15, 1),
 (8974, 'Dmytro', 'Pashytskyy', '1987-11-28', 84, 'S', 205, 352, 340, 467, 9, 1),
 (9002, 'Jason', 'De Rocco', '1989-09-19', 44, 'P', 201, 348, 330, 270, 9, 1),
 (9020, 'Hermans', 'Egleskalns', '1990-12-08', 53, 'A', 204, 356, 335, 198, 9, 1),
@@ -736,7 +713,6 @@ INSERT INTO `bs_siatkarze` (`ID_siatkarza`, `Imie`, `Nazwisko`, `Data_urodzenia`
 (10891, 'Julien', 'Lyneel', '1990-04-15', 29, 'P', 192, 340, 320, 846, 15, 1),
 (10902, 'Isbel', 'Mesa Sandobal', '1989-06-02', 50, 'S', 204, 358, 331, 442, 15, 1),
 (10919, 'Teodor', 'Todorov', '1989-09-01', 15, 'S', 207, 365, 345, 387, 2, 1),
-(10982, 'Adam', 'White', '1989-11-08', 6, 'P', 203, 0, 0, 252, 11, 1),
 (10988, 'Thijs', 'ter Horst', '1991-09-18', 34, 'P', 204, 360, 344, 667, 3, 1),
 (10994, 'Dejan', 'Skočic', '1983-05-09', 17, 'S', 204, 340, 325, 0, 0, 0),
 (11008, 'Mojtaba', 'Mirzajanpour', '1991-10-07', 38, 'P', 195, 325, 315, 708, 12, 1),
@@ -766,12 +742,11 @@ INSERT INTO `bs_siatkarze` (`ID_siatkarza`, `Imie`, `Nazwisko`, `Data_urodzenia`
 (13526, 'Trévor', 'Clevenot', '1994-06-28', 29, 'P', 198, 335, 316, 414, 17, 1),
 (13562, 'João Rafael', 'Ferreira', '1993-03-17', 14, 'P', 191, 339, 308, 754, 7, 1),
 (13663, 'Milad', 'Ebadipour Ghara', '1993-10-17', 38, 'P', 202, 350, 310, 269, 11, 2),
-(13764, 'Aaron', 'Russell', '1993-06-04', 75, 'P', 205, 356, 337, 705, 8, 2),
 (13790, 'Tomas', 'Rousseaux', '1994-03-31', 10, 'P', 198, 350, 318, 271, 14, 1),
 (13811, 'Gökhan', 'Gökgöz', '1993-01-06', 83, 'P', 200, 345, 327, 383, 8, 1),
 (13828, 'Tyler', 'Sanders', '1991-12-14', 44, 'R', 191, 326, 308, 309, 3, 1),
 (13870, 'Matej', 'Patak', '1990-06-08', 73, 'P', 197, 353, 330, 676, 17, 1),
-(13904, 'Artur', 'Szalpuk', '1995-03-20', 66, 'P', 202, 350, 335, 309, 12, 1),
+(13904, 'Artur', 'Szalpuk', '1995-03-20', 66, 'P', 202, 350, 335, 269, 12, 1),
 (13907, 'Victor', 'Poletaev', '1995-07-27', 70, 'A', 197, 368, 340, 467, 17, 1),
 (13909, 'Dmitry', 'Volkov', '1995-05-25', 70, 'P', 199, 340, 330, 344, 15, 2),
 (13910, 'Graham', 'Vigrass', '1989-06-17', 44, 'S', 203, 358, 335, 252, 8, 2),
@@ -782,8 +757,50 @@ INSERT INTO `bs_siatkarze` (`ID_siatkarza`, `Imie`, `Nazwisko`, `Data_urodzenia`
 (14653, 'Gabriele', 'Nelli', '1993-12-04', 89, 'A', 205, 355, 320, 420, 4, 1),
 (14727, 'Jovica', 'Simovski', '1982-11-17', 54, 'A', 195, 345, 328, 0, 0, 0),
 (14768, 'Thomas', 'Jaeschke', '1993-09-04', 75, 'P', 200, 348, 330, 416, 17, 2),
-(14771, 'Simone', 'Giannelli', '1996-08-09', 89, 'R', 198, 342, 310, 415, 9, 4),
-(14796, 'Ilyas', 'Kurkaev', '1994-01-18', 70, 'S', 208, 360, 340, 350, 15, 1);
+(14771, 'Simone', 'Giannelli', '1996-08-09', 89, 'R', 198, 342, 310, 415, 9, 4);
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `bs_siatkarze_historia`
+--
+
+CREATE TABLE `bs_siatkarze_historia` (
+  `sh_id` int(11) NOT NULL,
+  `sh_siatkarz` int(10) NOT NULL,
+  `sh_operacja` varchar(1) COLLATE utf8_polish_ci NOT NULL,
+  `sh_data` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Zrzut danych tabeli `bs_siatkarze_historia`
+--
+
+INSERT INTO `bs_siatkarze_historia` (`sh_id`, `sh_siatkarz`, `sh_operacja`, `sh_data`) VALUES
+(1, 14774, 'D', '2018-05-15 19:41:23'),
+(9, 13904, 'E', '2018-05-15 20:38:07'),
+(10, 179, 'E', '2018-05-15 20:39:22');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `bs_transfery`
+--
+
+CREATE TABLE `bs_transfery` (
+  `tra_id` int(11) NOT NULL,
+  `tra_siatkarz` int(11) NOT NULL,
+  `tra_poprzedni_zes` int(11) NOT NULL,
+  `tra_nowy_zes` int(11) NOT NULL,
+  `tra_data` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Zrzut danych tabeli `bs_transfery`
+--
+
+INSERT INTO `bs_transfery` (`tra_id`, `tra_siatkarz`, `tra_poprzedni_zes`, `tra_nowy_zes`, `tra_data`) VALUES
+(1, 179, 846, 448, '2018-05-15 20:39:22');
 
 -- --------------------------------------------------------
 
@@ -1560,6 +1577,12 @@ INSERT INTO `bs_zespoly` (`ID_zespol`, `zes_nazwa`, `zes_kraj`, `zes_rozgrywki`)
 --
 
 --
+-- Indeksy dla tabeli `bs_kraje`
+--
+ALTER TABLE `bs_kraje`
+  ADD PRIMARY KEY (`ID_kraj`);
+
+--
 -- Indeksy dla tabeli `bs_rozgrywki`
 --
 ALTER TABLE `bs_rozgrywki`
@@ -1570,6 +1593,18 @@ ALTER TABLE `bs_rozgrywki`
 --
 ALTER TABLE `bs_siatkarze`
   ADD PRIMARY KEY (`ID_siatkarza`);
+
+--
+-- Indeksy dla tabeli `bs_siatkarze_historia`
+--
+ALTER TABLE `bs_siatkarze_historia`
+  ADD PRIMARY KEY (`sh_id`);
+
+--
+-- Indeksy dla tabeli `bs_transfery`
+--
+ALTER TABLE `bs_transfery`
+  ADD PRIMARY KEY (`tra_id`);
 
 --
 -- Indeksy dla tabeli `bs_users`
@@ -1597,7 +1632,19 @@ ALTER TABLE `bs_rozgrywki`
 -- AUTO_INCREMENT dla tabeli `bs_siatkarze`
 --
 ALTER TABLE `bs_siatkarze`
-  MODIFY `ID_siatkarza` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14813;
+  MODIFY `ID_siatkarza` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14775;
+
+--
+-- AUTO_INCREMENT dla tabeli `bs_siatkarze_historia`
+--
+ALTER TABLE `bs_siatkarze_historia`
+  MODIFY `sh_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT dla tabeli `bs_transfery`
+--
+ALTER TABLE `bs_transfery`
+  MODIFY `tra_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT dla tabeli `bs_users`
